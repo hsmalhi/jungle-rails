@@ -1,2 +1,19 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class="admin-dashboard-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+
+  <table class="table table-bordered">
+    <tr>
+      <td><h4>Total Products in Database<h4></td>
+      <td><h4><%= @productCount.inspect %></h4></td>
+      <td><a class="btn btn-primary" href="/admin/products" role="button">All Products</a></td>
+    </tr>
+    <tr>
+      <td><h4>Number of Categories in Database</h4></td>
+      <td><h4><%= @categoryCount.inspect %><h4></td>
+      <td><a class="btn btn-primary" href="/admin/categories" role="button">All Categories</a></td>
+    </tr>
+  </table>
+</section>
