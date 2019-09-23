@@ -6,6 +6,14 @@ Rails.application.routes.draw do
 
   get "/about" => "about#show"
 
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
+
+  get "/register" => "users#new"
+  post "/users" => "users#create"
+
   resource :cart, only: [:show] do
     post :add_item
     post :remove_item
