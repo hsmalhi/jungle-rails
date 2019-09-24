@@ -22,9 +22,9 @@ RSpec.feature "Visitor navigates to product details page", type: :feature, js: t
 
     click_link("Details", :match => :first)
     expect(page).to have_css "article.product-detail", count: 1
-    page.has_content?("Name")
-    page.has_content?("Description")
-    page.has_content?("Quantity")
-    page.has_content?("Price")
+    expect(page).to have_content("Name")
+    expect(page).to have_content("Description")
+    expect(page).to have_content("Quantity")
+    expect(page).to have_content("Price")
   end
 end
